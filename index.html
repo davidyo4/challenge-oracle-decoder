@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;700&display=swap" rel="stylesheet">
+
+    
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Encriptador</title>
+</head>
+<body>
+    <div class="contenedor">
+    <header class="header">
+        <img class="logo" src="images/logo.png" alt="Logo de aplicación">
+    </header>
+        <main class="main">
+            <section class="textarea-descencriptado">
+            <p><textarea class="textoDescencriptado" name="textoDescencriptado" id="textoDescencriptado" placeholder="Ingrese su texto aquí"></textarea></p>
+                    
+            <div class="botones">
+                <input class="boton boton-encriptar" type="button" value="Encriptar!" id="botonEncriptar">
+                <input class="boton boton-descencriptar" type="button" value="Descencriptar!" id="botonDescencriptar">
+            </div>
+            </section>
+            
+            <section class="textarea-encriptado">
+                <textarea class="textoEncriptado" name="" id="textoEncriptado" readonly rows="12"></textarea>
+                <input class="boton boton-copiar" type="button" value="Copiar" id="botonCopiar">
+            </section>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
