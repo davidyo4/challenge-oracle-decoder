@@ -1,0 +1,141 @@
+:root {
+    --darkBlue: #0a3871;
+    --lightBlue100: #f3f5fc;
+    --lightBlue200: #eff1fa;
+    --gray100: #D8DFE8;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--lightBlue100);    
+}
+
+.contenedor {
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr;
+    gap: 20px;
+}
+
+.header {
+    grid-column: 1 / -1; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+    margin: 3rem 0 0 4rem;
+}
+
+.main{
+    grid-column: 1 / -1;
+    grid-row: 2 / auto;
+    display: grid;
+    grid-template-columns: repeat(2,fr);
+
+}
+
+.textarea-descencriptado, .textarea-encriptado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.textarea-descencriptado{
+    grid-column: 1 / 2;
+    grid-row: 1 / auto;
+}
+
+
+.textarea-encriptado{
+    grid-column: 2 / 3;
+    grid-row: 1 / auto;
+    width: 40rem;
+    background-color: #fff;
+    border-radius: 5rem;
+    background-image: url(images/Muñeco.png);
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+}
+
+.textoDescencriptado, .textoEncriptado {
+    color: var(--darkBlue);
+    font-family: inherit;
+    font-size: 3.2rem;
+    font-weight: 300;
+    background: none;    
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    resize: none;
+    padding: 1.5rem;
+}
+
+.textoDescencriptado{
+    width: 60rem;
+}
+textarea::content{
+    font-family: inherit;
+    font-size: 10rem;
+}
+
+.textoDescencriptado::placeholder {
+    color: var(--darkBlue);
+    font-family: inherit;
+    font-size: 3.2rem;
+    text-shadow: 1px 3px 4px var(--lightBlue100);
+}
+
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+.boton {
+    padding: 10px 15px;
+    font-size: 1.5 rem;
+    border-radius: 2.4rem;
+    width: 32.8rem;
+    height: 6.7rem;
+    margin-bottom: 2rem ;    
+}
+
+.boton:hover {
+    cursor: pointer;
+    animation: pulse;
+    animation-duration: 2s;
+    
+}
+
+.boton-encriptar{
+    background-color: var(--darkBlue);
+    border-color: var(--darkBlue);
+    margin-right: 1rem;
+    color: var(--lightBlue100);
+
+}
+
+.boton-descencriptar {
+    background-color: var(--gray100);
+    border-color: var(--darkBlue);
+    color: var(--darkBlue);
+}
+
+.boton-copiar {
+    background-color: #fff;
+    border-color: var(--darkBlue);
+    color: var(--darkBlue);
+}
