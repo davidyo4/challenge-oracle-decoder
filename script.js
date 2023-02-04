@@ -40,6 +40,9 @@ function ocultarImagen() {
     document.querySelector(".textarea-encriptado").style.backgroundImage = "none";
 }
 
+const btnEncriptar = document.querySelector("#botonEncriptar");
+btnEncriptar.onclick = encriptar;
+
 const btnDescencriptar = document.querySelector("#botonDescencriptar");
 btnDescencriptar.onclick = descencriptar;
 
